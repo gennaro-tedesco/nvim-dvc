@@ -1,8 +1,8 @@
 --[[ this module contains configuration options:
 define here configuration functions to be exposed ]]
 
-local opts = {}
+local loc = 'location'
 
 return {
-	opts = opts,
+	loc = loc,
 }
