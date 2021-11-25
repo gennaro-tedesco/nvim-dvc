@@ -18,7 +18,7 @@
   <a href="#Feedback">Feedback</a>
 </h3>
 
-If only one could interact with [DVC](https://dvc.org) from within neovim. Oh wait, `nvim-dvc` does just that.
+If only one could interact with [DVC](https://dvc.org) from within neovim. Oh wait, `nvim-dvc` does just that!
 
 ## Installation
 Install it using your favourite plugin manager; for instance if you are using vim-plug
@@ -47,3 +47,8 @@ If you prefer to populate the quickfix windown rather than the location list sim
 ```
 lua require('nvim-dvc.config').use_quickfix = true
 ```
+
+## Feedback and see also
+Do not forget that the best way to browse metrics files and json in general is [nvim-jqx](https://github.com/gennaro-tedesco/nvim-jqx).
+
+If you find this plugin useful consider awarding it a ⭐, it is a great way to give feedback! Otherwise, any additional suggestions or merge request is warmly welcome!
