@@ -5,6 +5,7 @@ endif
 command! DVCStages execute 'lua require("nvim-dvc").dvc_stages()'
 command! DVCMetrics execute 'lua require("nvim-dvc").dvc_metrics()'
 command! DVCFiles execute 'lua require("nvim-dvc").dvc_files()'
+command! DVCConfig execute 'lua require("nvim-dvc").dvc_config()'
 command! -complete=customlist,StagesKeys -nargs=? DVCRepro execute '!dvc repro '.<q-args>
 
 function! StagesKeys(A, L, P) abort

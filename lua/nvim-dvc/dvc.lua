@@ -2,10 +2,10 @@ local function git_root()
    return vim.fn.system("git rev-parse --show-toplevel 2> /dev/null"):gsub("[\r\n]", "")
 end
 
-local function get_dvc_yaml(git_root_path)
-   local dvc_yaml_file = git_root_path.."/dvc.yaml"
-   local f=io.open(dvc_yaml_file,"r")
-   if f~=nil then io.close(f) return dvc_yaml_file else return nil end
+local function get_dvc_config(git_root_path, filename)
+   local complete_path = git_root_path.."/"..filename
+   local f=io.open(complete_path,"r")
+   if f~=nil then io.close(f) return complete_path else return nil end
 end
 
 local function get_key_location(key)
@@ -17,7 +17,7 @@ end
 
 return {
    git_root = git_root,
-   get_dvc_yaml = get_dvc_yaml,
+   get_dvc_yaml = get_dvc_config,
    get_key_location = get_key_location,
 }
 
