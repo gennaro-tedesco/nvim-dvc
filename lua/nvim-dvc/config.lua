@@ -1,8 +1,8 @@
 --[[ this module contains configuration options:
 define here configuration functions to be exposed ]]
 
-local loc = 'location'
+local use_quickfix = false
 
 return {
-	loc = loc,
+	use_quickfix = use_quickfix,
 }

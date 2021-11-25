@@ -53,7 +53,7 @@ local function dvc_metrics()
 			table.insert(qf_list, {filename = v, lnum = 1, col = 1})
 		 end
 
-		 if config.loc == 'quickfix' then
+		 if config.use_quickfix then
 			vim.fn.setqflist(qf_list, ' ')
 			vim.cmd('copen')
 		 else
