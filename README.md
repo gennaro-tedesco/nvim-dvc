@@ -30,7 +30,7 @@ Notice that this plugin makes use of bash core utils and `jq` internally (to par
 ## Usage
 `nvim-dvc` populates the location list with DVC stages and metrics files for easy access to models performances, or it enables to execute pipelines making use of prompt autocompletion, or it quickly opens up the DVC configurations.
 
-- demo here
+![demo](https://user-images.githubusercontent.com/15387611/143473863-2863ffe9-9ac9-4057-a860-e21f97f2a680.gif)
 
 Default commands
 
