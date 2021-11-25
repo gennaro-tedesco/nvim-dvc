@@ -40,6 +40,9 @@ Default commands
 |`DVCMetrics`        | populate the location list with DVC metrics files
 |`DVCRepro`          | prompt autocompletion menu (after `<Tab>`) and execute stage
 |`DVCFiles`          | populate the location list with all DVC tracked files
+|`DVCConfig`         | open `/.dvc/config` for editing
+
+The commands usage is self-explanatory, just invoke them and sit back; however, see `:h dvc-usage` (or `:h <DVC-command>`)for further help.
 
 
 ## Customisation
