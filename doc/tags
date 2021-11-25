@@ -2,3 +2,7 @@ nvim-dvc	nvim-dvc.txt	/*nvim-dvc*
 dvc-introduction	nvim-dvc.txt	/*dvc-introduction*
 dvc-usage	nvim-dvc.txt	/*dvc-usage*
 dvc-customisation	nvim-dvc.txt	/*dvc-customisation*
+DVCStages	nvim-dvc.txt	/*DVCStages*
+DVCMetrics	nvim-dvc.txt	/*DVCMetrics*
+DVCRepro	nvim-dvc.txt	/*DVCRepro*
+DVCFiles	nvim-dvc.txt	/*DVCFiles*

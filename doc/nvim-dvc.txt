@@ -69,7 +69,7 @@ it is recommended that you have them installed.
 
   DVCMetrics       *DVCMetrics*
 
-  Executing DVCMetrics` opens the metrics files in the location list for
+  Executing `DVCMetrics` populates the location list with metrics files for
   quick access.
 >
 <
@@ -80,6 +80,12 @@ it is recommended that you have them installed.
   notice that additional flags can be provided and the strings are passed
   directly to the shell to be executed (so any valid dvc command flag would
   work).
+
+
+  DVCFiles         *DVCFiles*
+
+  Executing `DVCFiles` populates the location list with dvc-tracked files for
+  quick access.
 
 
 ==============================================================================
