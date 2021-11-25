@@ -1,0 +1,4 @@
+nvim-dvc	nvim-dvc.txt	/*nvim-dvc*
+dvc-introduction	nvim-dvc.txt	/*dvc-introduction*
+dvc-usage	nvim-dvc.txt	/*dvc-usage*
+dvc-customisation	nvim-dvc.txt	/*dvc-customisation*

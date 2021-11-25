@@ -1,0 +1,99 @@
+*nvim-dvc*: neovim interface to dvc: https://dvc.org/
+
+Author  : Gennaro Tedesco <gennarotedesco@gmail.com>
+License : MIT license {{{
+
+  Copyright (c)
+
+  Permission is hereby granted, free of charge, to any person obtaining
+  a copy of this software and associated documentation files (the
+  "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to
+  the following conditions:
+  The above copyright notice and this permission notice shall be
+  included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+}}}
+
+==============================================================================
+CONTENTS				*nvim-dvc-contents*
+
+    1. INTRODUCTION ................. |nvim-dvc-introduction|
+    2. USAGE ........................ |nvim-dvc-usage|
+    3. CUSTOMISATION ................ |nvim-dvc-customisation|
+
+==============================================================================
+1. INTRODUCTION				*dvc-introduction*
+
+*nvim-dvc* is the neovim interface to dvc: dvc: https://dvc.org/
+It allows to
+
+- populate the location list with dvc stages for easy lookup and navigation
+- populate the location list with dvc metrics file for quick access to models evaluations
+- autocomplete and execute dvc stages from within neovim
+- access dvc configurations quickly
+
+`nvim-dvc` makes use of command line core utils and `jq` (to parse dvc outputs), therefore
+it is recommended that you have them installed.
+
+==============================================================================
+2. USAGE				*dvc-usage*
+------------------------------------------------------------------------------
+
+`nvim-dvc` exposes the following commands to the user:
+
+  - DVCStages
+  - DVCMetrics
+  - DVCRepro
+  - DVCFiles
+  - DVCConfig
+  - DVCRemote
+
+  DVCStages       *DVCStages*
+
+  Executing `DVCStages` on any file in a git+dvc repository opens up
+  the corresponding `dvc.yaml` file (if it exists), populating the location
+  list with the pipeline stages. If the project is not a git repository or the
+  yaml file does not exists, an error message is displayed.
+
+
+  DVCMetrics       *DVCMetrics*
+
+  Executing DVCMetrics` opens the metrics files in the location list for
+  quick access.
+>
+<
+  DVCRepro         *DVCRepro*
+
+  `DVCRepro` enables tab completion for dvc stages in the command prompt. Use
+  it as `DVCRepro <TAB>` to see the list of available stages to execute:
+  notice that additional flags can be provided and the strings are passed
+  directly to the shell to be executed (so any valid dvc command flag would
+  work).
+
+
+==============================================================================
+3. CUSTOMISATION        *dvc-customisation*
+
+  You can choose whether to populate the location list (default) or the
+  quickfix list instead. Simply override the configuration setting
+  `lua require('nvim-dvc.config').use_quickfix = true`
+
+4. SEE ALSO
+
+  The best way to browse json files for model metrics in nvim is to use
+  nvim-jqx: https://github.com/gennaro-tedesco/nvim-jqx
+
+vim:ft=help:et:ts=2:sw=2:sts=2:norl
+
+
