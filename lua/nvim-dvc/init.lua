@@ -11,7 +11,7 @@ local function dvc_stages()
    for s in vim.fn.system("dvc stage list --names-only"):gmatch("[^\r\n]+") do
 	  table.insert(stages_lines, s)
    end
-   if next(stages_lines) == nil then print("no metrics files") return nil end
+   if next(stages_lines) == nil then print("no pipeline stages") return nil end
 
    vim.api.nvim_exec([[:e ]]..dvc_yaml_file, false)
    local qf_list = {}
