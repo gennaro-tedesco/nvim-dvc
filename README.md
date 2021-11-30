@@ -32,7 +32,7 @@ Notice that this plugin makes use of bash core utils and `jq` internally (to par
 
 ![demo](https://user-images.githubusercontent.com/15387611/143473863-2863ffe9-9ac9-4057-a860-e21f97f2a680.gif)
 
-Default commands
+Default commands:
 
 | command            | description
 |:------------------ |:-------------
