@@ -66,6 +66,11 @@ it is recommended that you have them installed.
   list with the pipeline stages. If the project is not a git repository or the
   yaml file does not exists, an error message is displayed.
 
+  `DVCStages` also displays autocompletion: hitting `<Tab>` shows a prompt
+  with all the dvc stages and allows to directly move to the selected one instead
+  of populating the location list, thereby making navigation much quicker in
+  case the stage to check is already known.
+
 
   DVCMetrics       *DVCMetrics*
 

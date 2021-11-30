@@ -28,19 +28,19 @@ Plug 'gennaro-tedesco/nvim-dvc'
 Notice that this plugin makes use of bash core utils and `jq` internally (to parse DVC outputs), so it is recommended to have them installed.
 
 ## Usage
-`nvim-dvc` populates the location list with DVC stages and metrics files for easy access to models performances, or it enables to execute pipelines making use of prompt autocompletion, or it quickly opens up the DVC configurations.
+`nvim-dvc` populates the location list with DVC stages and metrics files for easy access to models performances, or it enables to execute pipelines making use of prompt autocompletion, or it quickly opens up the DVC configurations. See demo below for a quick tour
 
 ![demo](https://user-images.githubusercontent.com/15387611/143473863-2863ffe9-9ac9-4057-a860-e21f97f2a680.gif)
 
 Default commands:
 
-| command            | description
-|:------------------ |:-------------
-|`DVCStages`         | populate the location list with DVC stages
-|`DVCMetrics`        | populate the location list with DVC metrics files
-|`DVCRepro`          | prompt autocompletion menu (after `<Tab>`) and execute stage
-|`DVCFiles`          | populate the location list with all DVC tracked files
-|`DVCConfig`         | open `/.dvc/config` for editing
+| command            | autocompletion | description
+|:------------------ |:---------------|:-------------
+|`DVCStages`         | `<Tab>`        | populate the location list with DVC stages
+|`DVCMetrics`        | No             | populate the location list with DVC metrics files
+|`DVCRepro`          | `<Tab>`        | prompt autocompletion menu (after `<Tab>`) and execute stage
+|`DVCFiles`          | No             | populate the location list with all DVC tracked files
+|`DVCConfig`         | No             | open `/.dvc/config` for editing
 
 The commands usage is self-explanatory, just invoke them and sit back; however, see `:h dvc-usage` (or `:h <DVC-command>`)for further help.
 
