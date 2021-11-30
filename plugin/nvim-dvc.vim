@@ -2,7 +2,8 @@ if exists('g:loaded_nvim_dvc')
 	finish
 endif
 
-command! DVCStages execute 'lua require("nvim-dvc").dvc_stages()'
+command! -complete=customlist,StagesKeys -nargs=? DVCStages execute 'lua require("nvim-dvc").dvc_stages("'..<q-args>..'")'
+
 command! DVCMetrics execute 'lua require("nvim-dvc").dvc_metrics()'
 command! DVCFiles execute 'lua require("nvim-dvc").dvc_files()'
 command! DVCConfig execute 'lua require("nvim-dvc").dvc_config()'

@@ -1,7 +1,7 @@
 local dvc = require("nvim-dvc.dvc")
 local config = require("nvim-dvc.config")
 
-local function dvc_stages()
+local function dvc_stages(stage)
    if dvc.git_root() == "" then print("not a git repository") return nil end
 
    local dvc_yaml_file = dvc.get_dvc_yaml(dvc.git_root(), "dvc.yaml")
@@ -17,6 +17,12 @@ local function dvc_stages()
    local qf_list = {}
    for _, v in pairs(stages_lines) do
 	  table.insert(qf_list, {filename = dvc_yaml_file, lnum = dvc.get_key_location(v).row, col = dvc.get_key_location(v).col, text = v})
+   end
+
+   if stage ~="" then
+	  vim.cmd('call cursor('..dvc.get_key_location(stage).row..','..dvc.get_key_location(stage).col..')')
+	  vim.cmd('let @/=""')
+	  return nil
    end
 
    if config.loc == 'quickfix' then
