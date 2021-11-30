@@ -28,9 +28,9 @@ Plug 'gennaro-tedesco/nvim-dvc'
 Notice that this plugin makes use of bash core utils and `jq` internally (to parse DVC outputs), so it is recommended to have them installed.
 
 ## Usage
-`nvim-dvc` populates the location list with DVC stages and metrics files for easy access to models performances, or it enables to execute pipelines making use of prompt autocompletion, or it quickly opens up the DVC configurations. See demo below for a quick tour
+`nvim-dvc` populates the location list with DVC stages and metrics files for easy access to models performances, or it enables to execute pipelines making use of prompt autocompletion, or it quickly opens up the DVC configurations. See demo below for a quick tour:
 
-![demo](https://user-images.githubusercontent.com/15387611/143473863-2863ffe9-9ac9-4057-a860-e21f97f2a680.gif)
+![demo](https://user-images.githubusercontent.com/15387611/144018897-5432fec1-c0a7-4329-93ae-9923f8b56f10.gif)
 
 Default commands:
 
@@ -51,7 +51,7 @@ If you prefer to populate the quickfix windown rather than the location list sim
 lua require('nvim-dvc.config').use_quickfix = true
 ```
 
-## Feedback and see also
+## Feedback
 Do not forget that the best way to browse metrics files and json in general is [nvim-jqx](https://github.com/gennaro-tedesco/nvim-jqx).
 
 If you find this plugin useful consider awarding it a ⭐, it is a great way to give feedback! Otherwise, any additional suggestions or merge request is warmly welcome!
