@@ -46,7 +46,7 @@ The commands usage is self-explanatory, just invoke them and sit back; however, 
 
 
 ## Customisation
-If you prefer to populate the quickfix windown rather than the location list simply override
+If you prefer to populate the quickfix window rather than the location list simply override
 ```
 lua require('nvim-dvc.config').use_quickfix = true
 ```
