@@ -40,7 +40,7 @@ local function dvc_metrics()
    if dvc.get_dvc_yaml(dvc.git_root(), "dvc.yaml") == nil then print("no dvc.yaml file") return nil end
 
    local metrics_lines = {}
-   for s in vim.fn.system("dvc metrics show --json | jq '.\"\".data' | grep json | cut -d'\"' -f2"):gmatch("[^\r\n]+") do
+   for s in vim.fn.system("dvc metrics show --json | jq '.[] | .[] | keys[]' | cut -d'\"' -f2"):gmatch("[^\r\n]+") do
 	  table.insert(metrics_lines, s)
    end
    if next(metrics_lines) == nil then print("no metrics files") return nil end
