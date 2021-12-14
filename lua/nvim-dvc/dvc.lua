@@ -11,7 +11,7 @@ end
 local function get_key_location(key)
    return {
 	  row = vim.api.nvim_exec([[g/^\s*\(- \)\?]]..key..[[/echo line('.')]], true),
-	  col = vim.api.nvim_exec([[g/^\s*\(- \)\?]]..key..[[/execute "normal! ^" | echo col('.')-1]], true)
+	  col = vim.api.nvim_exec([[g/^\s*\(- \)\?]]..key..[[/execute "normal! ^" | echo col('.')-1]], true) + 1
    }
 end
 
